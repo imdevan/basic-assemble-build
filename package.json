@@ -19,7 +19,8 @@
   },
   "scripts": {
     "test": "grunt assemble",
-    "post install": "bower isntall"
+    "post install": "bower isntall",
+    "start": "grunt server"
   },
   "devDependencies": {
     "assemble": "^0.4.42",
