@@ -18,7 +18,8 @@
     "node": ">=0.10"
   },
   "scripts": {
-    "test": "grunt assemble"
+    "test": "grunt assemble",
+    "post install": "bower isntall"
   },
   "devDependencies": {
     "assemble": "^0.4.42",
