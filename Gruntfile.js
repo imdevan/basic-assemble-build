@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= config.dist %>/{,*/}*.html',
+          '<%= config.dist %>/**/*.html',
           '<%= config.dist %>/assets/{,*/}*.css',
           '<%= config.dist %>/assets/{,*/}*.js',
           '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -74,6 +74,18 @@ module.exports = function(grunt) {
         },
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+        }
+      },
+      blog: {
+        options: {
+          flatten: false,
+          assets: '<%= config.dist %>/assets',
+          layout: '<%= config.src %>/templates/layouts/default.hbs',
+          data: '<%= config.src %>/data/*.{json,yml}',
+          partials: '<%= config.src %>/templates/partials/*.hbs'
+        },
+        files: {
+          '<%= config.dist %>/blog/': ['<%= config.src %>/templates/pages/blog/*.hbs']
         }
       }
     },
